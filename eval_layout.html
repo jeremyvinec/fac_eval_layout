@@ -1,11 +1,95 @@
 <!DOCTYPE html>
 <html lang="fr">
 	<style>
+		*{
+			margin: 0 auto;
+		}
 
+		div img{
+			width: 100%;
+		}
+
+		.txtcenter{
+			text-align: center;
+		}
+		@media screen and (min-width: 320px) and (max-width: 768px){
+			.tablette{
+				display: none;
+			}
+			.desktop{
+				display: none;
+			}
+			.desktopG{
+				display: none;
+			}
+		}
+
+		@media screen and (min-width: 768px) and (max-width: 970px){
+			section{
+				display: flex;
+			}
+			div{
+				margin: 10px;
+			}
+			.telephone{
+				display: none;
+			}
+			.desktop{
+				display: none;
+			}
+			.desktopG{
+				display: none;
+			}
+		}
+
+		@media screen and (min-width: 970px) and (max-width: 1370px){
+			section{
+				display: flex;
+			}
+
+			div{
+				margin: 10px;
+			}
+			.telephone{
+				display: none;
+			}
+			.tablette{
+				display: none;
+			}
+			.desktopG{
+				display: none;
+			}
+		}
+
+		@media screen and (min-width: 1370px){
+			section{
+				display: flex;
+			}
+
+			div{
+				margin: 10px;
+			}
+			#layout{
+				display: flex;
+			}
+			.telephone{
+				display: none;
+			}
+			.tablette{
+				display: none;
+			}
+			.desktop{
+				display: none;
+			}
+		}
 	</style>
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" media="screen and (min-width: 1370px)" href="width_1370.css" type="text/css" />
+		<link rel="stylesheet" media="screen and (max-width: 768px)" href="width_768.css" type="text/css" />
+		<link rel="stylesheet" media="screen and (min-width: 320px)" href="width_320.css" type="text/css" />
+
 		<title>Eval Layout</title>
 		<link rel="stylesheet" href="css/style.css">
 	</head>
@@ -15,8 +99,23 @@
 		<h2 class="desktop txtcenter">Vue Desktop</h2>
 		<h2 class="tablette txtcenter">Vue Tablette à 768px à 970px</h2>
 		<h2 class="telephone txtcenter">Vue Téléphone à 320px</h2>
-
-
-
+		<div id="layout">
+			<section>
+				<div>
+					<img src="img/mer.jpg">
+				</div>
+				<div>
+					<img src="img/lac.jpg">
+				</div>
+			</section>
+			<section>
+				<div>
+					<img src="img/montagne.jpg">
+				</div>
+				<div>
+					<img src="img/foret.jpg">
+				</div>
+			</section>
+		</div>
 	</body>
 </html>
